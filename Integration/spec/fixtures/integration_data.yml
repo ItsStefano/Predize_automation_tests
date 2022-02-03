@@ -1,0 +1,11 @@
+---
+  user_ml_test:  'TETE8981674'
+  password_ml_test: 'qatest3752'
+  userName_ml_test: 'Test'
+  user_predize_test:  'automacao@teste.com.br'
+  password_predize_test: '123Mudar'
+  msg_login_sucess: "Login realizado com sucesso, seja bem-vindo ao Predize!"
+  question: "Questionamento automático via Ruby, nao responder"
+  question_ml_sucess: "Pronto! Você fez sua pergunta. Vamos te notificar quando receber a resposta."
+  answerValue: "Resposta automatica realizado com sucesso"
+  answer_send_sucess: "Mensagem enviada com sucesso!"

@@ -1,0 +1,6 @@
+#Arquivo de configuração para execução do sistema em ambiente da Homoloação
+---
+  predize_url: https://app.predize.com.br/
+  ml_url: https://mercadolivre.com.br/
+  ml_login_url: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fwww.mercadolivre.com.br%2F&loginType=explicit#nav-header
+  produt_test_ml_url: https://produto.mercadolivre.com.br/MLB-2068399384-item-de-teste-por-favor-no-ofertar-_JM

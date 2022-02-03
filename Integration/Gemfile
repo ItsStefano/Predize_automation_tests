@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "capybara"
+gem "selenium-webdriver"
+gem "rspec"
+gem "faker"
+gem "allure-rspec"
+gem "rake"

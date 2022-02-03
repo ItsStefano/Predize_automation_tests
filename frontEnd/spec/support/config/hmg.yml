@@ -1,0 +1,22 @@
+#Arquivo de configuração para execução do sistema em ambiente da Homoloação
+---
+  predize_url: https://app.predize.com.br/
+  user_predize_test:  'automacao@teste.com.br'
+  password_predize_test: '123Mudar'
+  msg_login_sucess: "Login realizado com sucesso, seja bem-vindo ao Predize!"
+  question: "Questionamento automático via Ruby, nao responder"
+  answerValue: "Resposta automatica realizado com sucesso"
+  answer_send_sucess: "Mensagem enviada com sucesso!"
+  loginFailed: 
+    - title: 'Case #2 - Tentativa de login com usuário inválido'
+      user_failed_test: 'automacao.teste.com.br'
+      pass_failed_test: '123Mudar'
+      msg_failed_test: "Não foi possível realizar seu login! Verifique e-mail e senha e tente novamente." 
+    - title: 'Case #3 - Tentativa de login com senha inválido'
+      user_failed_test: 'automacao@teste.com.br'
+      pass_failed_test: '123456'
+      msg_failed_test: "Não foi possível realizar seu login! Verifique e-mail e senha e tente novamente." 
+    - title: 'Case #4 - Tentativa de login com um usuário não cadastrado'
+      user_failed_test: 'teste@automacao.com.br'
+      pass_failed_test: '123Mudar'
+      msg_failed_test: "Não foi possível realizar seu login! Verifique e-mail e senha e tente novamente." 

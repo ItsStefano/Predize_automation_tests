@@ -17,10 +17,14 @@ describe "Suite Case Pre-vendas: Importação e Envio de Pergunta" do
         @loginML.login(@dataMass[:user_ml_test], @dataMass[:password_ml_test])           
         expect(@dashML.getUserLogin.text).to eq "Test"
 
+        @question = @dataMass[:question] + timestamp
+
         #Enviando Mensagem ao vendedor do Produto de Teste
         @productML.productTestVisitPage
-        @productML.sendAnswer(@dataMass[:question])
+        @productML.sendAnswer(@question)
         expect(@components.alertMLMessage).to eql @dataMass[:question_ml_sucess]
+
+        
 
     end
     context "Validar a importação da pergunta"  do
@@ -29,8 +33,8 @@ describe "Suite Case Pre-vendas: Importação e Envio de Pergunta" do
             @loginPredize.login(@dataMass[:user_predize_test], @dataMass[:password_predize_test])
             expect(@components.toastMessage).to eql @dataMass[:msg_login_sucess]
             
-            @homePredize.accessPreOrderMenu
-            @preOrderPage.searchQuestion(@dataMass[:question])
+            @homePredize.accessPreOrderMenu 
+            @preOrderPage.searchQuestion(@question)
             @preOrderPage.confirmSearchQuestion
             
             expect(@preOrderPage.questionIsFound?).to be true
@@ -40,7 +44,7 @@ describe "Suite Case Pre-vendas: Importação e Envio de Pergunta" do
         it "Case #2 - Responder a pergunta feita no ML", :answer do
             @loginPredize.login(@dataMass[:user_predize_test], @dataMass[:password_predize_test])
             @homePredize.accessPreOrderMenu
-            @preOrderPage.searchQuestion(@dataMass[:question])
+            @preOrderPage.searchQuestion(@question)
             @preOrderPage.confirmSearchQuestion
             @preOrderPage.clickFirstQuestionInTable
 

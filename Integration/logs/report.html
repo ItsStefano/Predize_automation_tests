@@ -287,14 +287,36 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Validar a importação da pergunta</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_2');</script>
+    <script type="text/javascript">makeRed('example_group_2');</script>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Case #1 - Validar a importação da pergunta</span><span class='duration'>28.14832s</span></dd>
+    <dd class="example failed">
+      <span class="failed_spec_name">Case #1 - Validar a importação da pergunta</span>
+      <span class="duration">19.20263s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: find(@passwordField).set password
+
+  Capybara::ElementNotFound:
+    Unable to find css &quot;#password&quot;
+  # ./spec/support/view/pages/ML/loginML_page.rb:25:in `login&#39;
+  # ./spec/scenarios/ImportAndAnswer_spec.rb:17:in `block (2 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/support/view/pages/ML/loginML_page.rb:25:in `login&#39;
+./spec/scenarios/ImportAndAnswer_spec.rb:17:in `block (2 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">23</span>      click_button "Continuar"
+<span class="linenum">24</span>
+<span class="offending"><span class="linenum">25</span>      find(@passwordField).set password</span>
+<span class="linenum">26</span>      click_button "Entrar"
+<span class="linenum">27</span>    end
+<span class="linenum">28</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Case #2 - Responder a pergunta feita no ML</span><span class='duration'>21.75104s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Case #2 - Responder a pergunta feita no ML</span><span class='duration'>27.36527s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>49.97874 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "2 examples, 0 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>46.66941 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "2 examples, 1 failure";</script>
 </div>
 </div>
 </body>

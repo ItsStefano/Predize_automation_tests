@@ -4,7 +4,7 @@ class HomePredizePage
       def initialize
         #Elements Mapping
         @preOrderMenu = '#pre-order-menu'
-        @proOrderMenu = '#pre-order-menu'
+        @posOrderMenu = '#pos-order-menu'
         
       end
 
